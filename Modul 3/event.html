@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <title>Halaman Beranda</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="author" content="Afid Setiawan">
+    <meta name="nim" content="253307056">
+
+    <meta name="description" content="Website praktikum HTML5 Lanjut">
+    <meta name="keywords" content="HTML5, Form, Audio, Video, SVG, Canvas">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+        }
+
+        /* HEADER */
+        header {
+            background-color: #666;
+            padding: 30px;
+            text-align: center;
+            font-size: 25px;
+            color: white;
+        }
+
+        /* NAVIGATION */
+        nav {
+            float: left;
+            width: 25%;
+            background: #ccc;
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin-bottom: 10px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+        }
+
+        /* ARTICLE (GALERI) */
+        article {
+            float: left;
+            padding: 20px;
+            width: 75%;
+            background-color: #f1f1f1;
+
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+        }
+
+        /* IMAGE */
+        img {
+            width: 100%;
+            max-height: 200px;
+            object-fit: contain;
+
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        img:hover {
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        /* CLEAR FLOAT */
+        section::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* FOOTER */
+        footer {
+            background-color: #777;
+            padding: 10px;
+            text-align: center;
+            color: white;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 600px) {
+
+            nav,
+            article {
+                width: 100%;
+            }
+
+            nav {
+                min-height: auto;
+            }
+        }
+    </style>
+
+    <script>
+        function zoomIn(img) {
+            img.style.transform = "scale(1.3)";
+            img.style.zIndex = "10";
+            img.style.position = "relative";
+        }
+
+        function zoomOut(img) {
+            img.style.transform = "scale(1)";
+            img.style.zIndex = "1";
+        }
+    </script>
+
+</head>
+
+<body>
+
+    <header>
+        <h2>Potret History Aktor 90s☆</h2>
+    </header>
+
+    <section>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gambar.html">Gambar</a></li>
+                <li><a href="event.html">Event</a></li>
+                <li><a href="audio.html">Audio</a></li>
+                <li><a href="video.html">Video</a></li>
+                <li><a href="svg.html">SVG</a></li>
+                <li><a href="canvas.html">Canvas</a></li>
+                <li><a href="pendaftaran.html">Pendaftaran</a></li>
+            </ul>
+        </nav>
+
+        <article>
+            <img src="gambar/gambar1.jpg" onmouseover="zoomIn(this)" onmouseout="zoomOut(this)">
+            <img src="gambar/gambar2.jpg" onmouseover="zoomIn(this)" onmouseout="zoomOut(this)">
+            <img src="gambar/gambar3.jpg" onmouseover="zoomIn(this)" onmouseout="zoomOut(this)">
+            <img src="gambar/gambar4.jpg" onmouseover="zoomIn(this)" onmouseout="zoomOut(this)">
+            <img src="gambar/gambar5.jpg" onmouseover="zoomIn(this)" onmouseout="zoomOut(this)">
+            <img src="gambar/gambar6.jpg" onmouseover="zoomIn(this)" onmouseout="zoomOut(this)">
+            <img src="gambar/gambar7.jpg" onmouseover="zoomIn(this)" onmouseout="zoomOut(this)">
+            <img src="gambar/gambar8.jpg" onmouseover="zoomIn(this)" onmouseout="zoomOut(this)">
+            <img src="gambar/gambar9.jpg" onmouseover="zoomIn(this)" onmouseout="zoomOut(this)">
+            <img src="gambar/gambar10.jpg" onmouseover="zoomIn(this)" onmouseout="zoomOut(this)">
+        </article>
+
+    </section>
+
+    <footer>
+        <p>&copy; 2026 - Praktikum HTML5 | Afid Setiawan</p>
+    </footer>
+
+</body>
+
+</html>

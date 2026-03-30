@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Halaman Beranda</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="widht=device-widht, initial-scale=1">
+    <meta name="author" content="John Doe"><!--Afid Setiawan-->
+    <meta name="nim" content="12345"><!--253307056-->
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        header {
+            background-color: #666;
+            padding: 30px;
+            text-align: center;
+            font-size: 35px;
+            color: white;
+        }
+
+        nav {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        article {
+            float: left;
+            padding: 20px;
+            width: 70%;
+            background-color: #f1f1f1;
+            height: 300px;
+            /* only for demonstration, should be removed */
+        }
+
+        section::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        footer {
+            background-color: #777;
+            padding: 10px;
+            text-align: center;
+            color: white;
+        }
+
+        @media (max-widht: 600px) {
+
+            nav,
+            article {
+                width: 100%;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h2>Website Afids</h2>
+    </header>
+
+    <section>
+        <nav> <!-- navigasi halaman/link -->
+
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gambar.html">Gambar</a></li>
+                <li><a href="event.html">Event</a></li>
+                <li><a href="audio.html">Audio</a></li>
+                <li><a href="video.html">Video</a></li>
+                <li><a href="svg.html">SVG</a></li>
+                <li><a href="canvas.html">Canvas</a></li>
+
+            </ul>
+
+        </nav>
+
+        <article>
+            <h1>Artikel Terkini Tahun 90an</h1>
+            <h3>Ini adalah potret aktor hongkong tahun 90an , Joey Woeng terkenal karena sering memerankan tokoh hantu
+                yang cantik menawan dan baik hati, dikisahkan si hantu menolong para pejalan kaki yang tersesat
+                di gunung, aktor Joey Woeng di beri gelar "Ratu Hantu". Karena, sering memerankan tokoh hantu, wanita
+                berparas cantik ini berasal dari tanah kelahiran Taiwan (Taipei).</h3>
+            <!-- konten artikel disini -->
+            <p> <!--Tulis kesimpulan hasil coba disini --></p>
+        </article>
+    </section>
+
+    <footer>
+        <p>Hubungi Saya : +62889-8990-7796</p> <!-- ubah sesuai selera anda-->
+    </footer>
+</body>
