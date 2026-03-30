@@ -1,0 +1,173 @@
+```html
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <title>Maria Togel</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="author" content="Afid Setiawan">
+    <meta name="nim" content="253307056">
+    <meta name="description" content="Stop">
+    <meta name="keywords" content="HTML5, Gallery, Responsive">
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /* HEADER */
+        header {
+            background-color: #0f19d7;
+            padding: 30px;
+            text-align: center;
+            font-size: 35px;
+        }
+
+        /* TEKS KELAP-KELIP */
+        .kelapkelip {
+            color: yellow;
+            font-weight: bold;
+            animation: warna 1s infinite;
+        }
+
+        @keyframes warna {
+            0% {
+                color: yellow;
+            }
+
+            15% {
+                color: rgb(0, 255, 26);
+            }
+
+            35% {
+                color: red;
+            }
+
+            65% {
+                color: rgb(0, 213, 255);
+            }
+
+            85% {
+                color: rgb(252, 120, 12);
+            }
+
+            100% {
+                color: rgb(144, 0, 255);
+            }
+        }
+
+        /* LAYOUT */
+        section {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        /* NAVIGATION */
+        nav {
+            width: 25%;
+            background: #e20b9a;
+            padding: 20px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin-bottom: 10px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: rgb(255, 230, 10);
+            font-weight: bold;
+        }
+
+        /* ARTICLE */
+        article {
+            width: 75%;
+            padding: 20px;
+            background-color: #fa0fde;
+        }
+
+        /* GALLERY */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border: 8px solid chocolate;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        /* FOOTER */
+        footer {
+            background-color: #ff2d08;
+            padding: 15px;
+            text-align: center;
+            color: rgb(21, 14, 14);
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            nav {
+                width: 100%;
+            }
+
+            article {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h2 class="kelapkelip">Maria Togel 12</h2>
+    </header>
+
+    <section>
+
+        <nav>
+            <ul>
+                <li><a href="gambar.html">Gambar</a></li>
+            </ul>
+        </nav>
+
+        <article>
+            <h1 class="kelapkelip">Stop Judi Online/Offline</h1>
+
+            <div class="gallery">
+                <img src="gambar/gambar1.png" alt="Potret 1">
+            </div>
+        </article>
+
+    </section>
+
+    <footer>
+        <p>&copy; Situs slot gacor hari ini@</p>
+    </footer>
+
+</body>
+
+</html>
