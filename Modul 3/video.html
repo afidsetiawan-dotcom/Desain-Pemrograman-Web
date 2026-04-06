@@ -6,15 +6,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Ubah sesuai data Anda -->
     <meta name="author" content="Afid Setiawan">
     <meta name="nim" content="253307056">
-
-    <!-- Melengkapi Meta (Blok Bagian Hijau) -->
     <meta name="description" content="Website praktikum HTML5 Lanjut">
     <meta name="keywords" content="HTML5, Form, Audio, Video, SVG, Canvas">
 
-    <!-- Melengkapi Style (Blok Bagian Hijau) -->
     <style>
         * {
             box-sizing: border-box;
@@ -34,12 +30,15 @@
             color: white;
         }
 
+        /* LAYOUT FLEXBOX */
+        section {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
         /* NAVIGATION */
         nav {
-            float: left;
             width: 30%;
-            height: 300px;
-            /* hanya untuk demo */
             background: #ccc;
             padding: 20px;
         }
@@ -61,19 +60,24 @@
 
         /* ARTICLE */
         article {
-            float: left;
-            padding: 20px;
             width: 70%;
             background-color: #f1f1f1;
-            height: 660px;
-            /* hanya untuk demo */
+            padding: 20px;
         }
 
-        /* CLEAR FLOAT */
-        section::after {
-            content: "";
-            display: table;
-            clear: both;
+        /* VIDEO SHORTS */
+        .shorts-container {
+            position: relative;
+            width: 100%;
+            max-width: 400px;
+            margin: auto;
+            aspect-ratio: 9/16;
+        }
+
+        .shorts-container iframe {
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
         }
 
         /* FOOTER */
@@ -90,7 +94,6 @@
             nav,
             article {
                 width: 100%;
-                height: auto;
             }
         }
     </style>
@@ -105,47 +108,49 @@
     <section>
 
         <nav>
-            <!-- Melengkapi Navigation Link (Blok Bagian Hijau) -->
-            <li><a href="index.html">Home</a></li>
-            <li><a href="gambar.html">Gambar</a></li>
-            <li><a href="event.html">Event</a></li>
-            <li><a href="audio.html">Audio</a></li>
-            <li><a href="video.html">Video</a></li>
-            <li><a href="svg.html">SVG</a></li>
-            <li><a href="canvas.html">Canvas</a></li>
-            <li><a href="pendaftaran.html">Pendaftaran</a></li>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gambar.html">Gambar</a></li>
+                <li><a href="event.html">Event</a></li>
+                <li><a href="audio.html">Audio</a></li>
+                <li><a href="video.html">Video</a></li>
+                <li><a href="svg.html">SVG</a></li>
+                <li><a href="canvas.html">Canvas</a></li>
+                <li><a href="pendaftaran.html">Pendaftaran</a></li>
+            </ul>
         </nav>
 
         <article>
             <h1>Video HTML5</h1>
 
+            <!-- VIDEO LOKAL -->
             <figure>
-                <figcaption><strong>Video Lokal (Folder Gambar)</strong></figcaption>
-                <video controls autoplay muted>
+                <figcaption><strong>90s Joey Wong</strong></figcaption>
+                <video controls autoplay muted style="width:100%; max-width:500px; margin: auto; aspect-ratio: 16/9;">
                     <source src="gambar/video.mp4" type="video/mp4">
                     <source src="video/video.mp4" type="video/mp4">
                     Browser tidak mendukung video.
                 </video>
             </figure>
 
-            <!-- Tambahan Iframe YouTube -->
+            <!-- YOUTUBE SHORTS -->
             <figure>
-                <figcaption><strong>Video YouTube Shorts</strong></figcaption>
+                <figcaption><strong>Video YouTube Shorts Artis Joey Wong90s</strong></figcaption>
 
-                <iframe src="https://www.youtube.com/embed/qgIhUxiOu0E" title="YouTube Shorts" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen style="width:100%; height:300px; border-radius:10px;">
-                </iframe>
-            </figure>
+                <div class="shorts-container">
+                    <iframe src="https://www.youtube.com/embed/qgIhUxiOu0E" title="YouTube Shorts" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
+                </div>
             </figure>
 
             <p>
-                <strong>Kesimpulan Hasil Ujicoba:</strong><br>
-                Video lokal menggunakan tag <code>&lt;video&gt;</code> dapat dikontrol penuh melalui atribut
-                seperti controls, autoplay, dan muted.
-                Sedangkan video YouTube menggunakan <code>&lt;iframe&gt;</code> yang mengambil konten
-                langsung dari server YouTube dan tidak memerlukan file lokal.
-                Iframe memudahkan integrasi video eksternal tanpa menyimpan file di server sendiri.
+                <strong>Kesimpulan:</strong><br>
+            <p>Artis cantik kelahiran Taiwan (Taipei)</p>
+            Video lokal menggunakan tag <code>&lt;video&gt;</code> dapat dikontrol penuh.
+            Sedangkan YouTube menggunakan <code>&lt;iframe&gt;</code> sehingga lebih mudah
+            tanpa menyimpan file di server sendiri.
             </p>
         </article>
 
@@ -156,3 +161,5 @@
     </footer>
 
 </body>
+
+</html>
