@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Belajar Flex Box</title>
+    <style>
+        .wadah-flex {
+            display: flex;
+            /* fleksibel */
+            background-color: #f0f0f0;
+            gap: 10px;
+            padding: 10px;
+        }
+
+        /* Skenario 2 – style untuk setiap anak div */
+        .wadah-flex>div {
+            background-color: #2196F3;
+            color: white;
+            margin: 10px;
+            padding: 10px;
+            font-size: 30px;
+        }
+
+        /* Skenario 3 – flex direction */
+        .wadah-flex {
+            flex-direction: column-reverse;
+        }
+
+        /* Skenario 4 – flex wrap */
+        .wadah-flex {
+            flex-wrap: wrap-reverse;
+        }
+
+        /* Skenario 5 – flex-flow */
+        .wadah-flex {
+            flex-flow: row wrap;
+        }
+
+        /* Skenario 6 – justify-content */
+        .wadah-flex {
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wadah-flex">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>
+    </div>
+    <p>Kesimpulan skenario 2: Flex container mengatur posisi child secara horizontal.</p>
+    <p>Kesimpulan skenario 3: Flex container mengatur posisi child secara horizontal.</p>
+    <p>Kesimpulan skenario 4: Flex container mengatur posisi child secara horizontal.</p>
+    <p>Kesimpulan skenario 5: Flex container mengatur posisi child secara horizontal.</p>
+    <p>Kesimpulan skenario 6: Flex container mengatur posisi child secara center.</p>
+</body>
+
+</html>
