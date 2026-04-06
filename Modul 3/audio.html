@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <title>Halaman Beranda</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="author" content="Afid Setiawan">
+    <meta name="nim" content="253307056">
+    <meta name="description" content="Website praktikum HTML5 Lanjut">
+    <meta name="keywords" content="HTML5, Form, Audio, Video, SVG, Canvas">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* HEADER */
+        header {
+            background-color: #666;
+            padding: 30px;
+            text-align: center;
+            font-size: 35px;
+            color: white;
+        }
+
+        /* MAIN (UNTUK STICKY FOOTER) */
+        main {
+            flex: 1;
+        }
+
+        /* LAYOUT */
+        section {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        /* NAVIGATION */
+        nav {
+            width: 30%;
+            background: #ccc;
+            padding: 20px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin-bottom: 10px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+        }
+
+        /* ARTICLE */
+        article {
+            width: 70%;
+            background-color: #f1f1f1;
+            padding: 20px;
+        }
+
+        /* AUDIO */
+        audio {
+            width: 100%;
+            max-width: 400px;
+        }
+
+        /* FOOTER */
+        footer {
+            background-color: #777;
+            padding: 10px;
+            text-align: center;
+            color: white;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 600px) {
+
+            nav,
+            article {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h2>Judul Website</h2>
+    </header>
+
+    <main>
+        <section>
+
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="gambar.html">Gambar</a></li>
+                    <li><a href="event.html">Event</a></li>
+                    <li><a href="audio.html">Audio</a></li>
+                    <li><a href="video.html">Video</a></li>
+                    <li><a href="svg.html">SVG</a></li>
+                    <li><a href="canvas.html">Canvas</a></li>
+                    <li><a href="pendaftaran.html">Pendaftaran</a></li>
+                </ul>
+            </nav>
+
+            <article>
+                <h1>Audio HTML5</h1>
+
+                <figure>
+                    <figcaption><strong>Audio Lokal</strong></figcaption>
+                    <audio controls>
+                        <source src="audio/lagu.mp3" type="audio/mpeg">
+                        Browser tidak mendukung audio.
+                    </audio>
+                </figure>
+
+                <p>
+                    <strong>Kesimpulan:</strong><br>
+                    Karena kamu cantik dan baik😘
+                </p>
+            </article>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 - Praktikum HTML5 | Afid Setiawan</p>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <title>Halaman Beranda</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="author" content="Afid Setiawan">
+    <meta name="nim" content="253307056">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            margin: 0;
+            height: 100%;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            background-color: #666;
+            padding: 30px;
+            text-align: center;
+            font-size: 30px;
+            color: white;
+        }
+
+        main {
+            flex: 1;
+        }
+
+        section {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        nav {
+            width: 30%;
+            background: #ccc;
+            padding: 20px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin-bottom: 10px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+        }
+
+        article {
+            width: 70%;
+            padding: 20px;
+            background-color: #f1f1f1;
+        }
+
+        fieldset {
+            max-width: 600px;
+        }
+
+        table {
+            width: 100%;
+        }
+
+        td {
+            padding: 5px;
+            vertical-align: top;
+        }
+
+        footer {
+            background-color: #777;
+            padding: 10px;
+            text-align: center;
+            color: white;
+        }
+
+        @media (max-width: 600px) {
+
+            nav,
+            article {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h2>Website Afids</h2>
+    </header>
+
+    <main>
+        <section>
+
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="gambar.html">Gambar</a></li>
+                    <li><a href="event.html">Event</a></li>
+                    <li><a href="audio.html">Audio</a></li>
+                    <li><a href="video.html">Video</a></li>
+                    <li><a href="svg.html">SVG</a></li>
+                    <li><a href="canvas.html">Canvas</a></li>
+                    <li><a href="pendaftaran.html">Pendaftaran</a></li>
+                </ul>
+            </nav>
+
+            <article>
+
+                <h2>Form Pendaftaran Mahasiswa Baru</h2>
+
+                <form action="proses.php" method="POST" enctype="multipart/form-data">
+                    <fieldset>
+                        <legend>Form Pendaftaran</legend>
+
+                        <table>
+
+                            <tr>
+                                <td>Nama Lengkap</td>
+                                <td><input type="text" name="nama"></td>
+                            </tr>
+
+                            <tr>
+                                <td>Tempat, Tanggal Lahir</td>
+                                <td>
+                                    <input type="text" placeholder="Tempat">
+                                    <input type="date">
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>Agama</td>
+                                <td>
+                                    <select name="agama">
+                                        <option>-PILIH-</option>
+                                        <option>Islam</option>
+                                        <option>Kristen</option>
+                                        <option>Katolik</option>
+                                        <option>Hindu</option>
+                                        <option>Budha</option>
+                                        <option>Konghucu</option>
+                                    </select>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>Jenis Kelamin</td>
+                                <td>
+                                    <input type="radio" name="jk" value="Laki-laki"> Laki-laki
+                                    <input type="radio" name="jk" value="Perempuan"> Perempuan
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>No. Ijazah SMA/MA</td>
+                                <td><input type="text" name="ijazah"></td>
+                            </tr>
+
+                            <tr>
+                                <td>Foto</td>
+                                <td>
+                                    <input type="file" id="myfile" accept="image/*"><br>
+
+                                    <img id="preview" src="" width="150" style="display:none;">
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>Nama Ayah</td>
+                                <td><input type="text" name="ayah"></td>
+                            </tr>
+
+                            <tr>
+                                <td>Nama Ibu</td>
+                                <td><input type="text" name="ibu"></td>
+                            </tr>
+
+                            <tr>
+                                <td>Alamat Rumah</td>
+                                <td><textarea name="alamat_rumah" rows="4"></textarea></td>
+                            </tr>
+
+                            <tr>
+                                <td>No. Telp</td>
+                                <td><input type="text" name="telp"></td>
+                            </tr>
+
+                            <tr>
+                                <td>Nama Sekolah Asal</td>
+                                <td><input type="text" name="sekolah"></td>
+                            </tr>
+
+                            <tr>
+                                <td>Alamat Sekolah Asal</td>
+                                <td><textarea name="alamat_sekolah" rows="4"></textarea></td>
+                            </tr>
+
+                            <tr>
+                                <td>Jurusan Dipilih</td>
+                                <td>
+                                    <select name="jurusan">
+                                        <option>-PILIH-</option>
+                                        <option>Teknik Informatika</option>
+                                        <option>Sistem Informasi</option>
+                                        <option>Teknik Elektro</option>
+                                        <option>Teknik Mesin</option>
+                                        <option>Akuntansi</option>
+                                        <option>Teknik Listrik</option>
+                                    </select>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>Tahu informasi ini dari</td>
+                                <td>
+                                    <input type="checkbox" name="info[]" value="Koran"> Koran
+                                    <input type="checkbox" name="info[]" value="Website"> Website
+                                    <input type="checkbox" name="info[]" value="Televisi"> Televisi
+                                    <input type="checkbox" name="info[]" value="Radio"> Radio
+                                    <input type="checkbox" name="info[]" value="Teman"> Teman
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td></td>
+                                <td>
+                                    <input type="submit" value="DAFTAR">
+                                    <input type="reset" value="BATAL">
+                                </td>
+                            </tr>
+
+                        </table>
+
+                    </fieldset>
+                </form>
+
+            </article>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>Hubungi Saya : +62889-8990-7796</p>
+    </footer>
+
+    <script>
+        document.getElementById("file").addEventListener("change", function (e) {
+            const file = e.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    const img = document.getElementById("preview");
+                    img.src = e.target.result;
+                    img.style.display = "block";
+                }
+                reader.readAsDataURL(file);
+            }
+        });
+    </script>
+
+</body>
+
+</html>
